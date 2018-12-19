@@ -1,0 +1,524 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"5e3090764a","applicationID":"16455065","transactionName":"Jg1bRkFaXllTER1HFgARQVtcW0EaRQtdQQ==","queueTime":0,"applicationTime":115,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIHU1RVGwIGUFRXBwcC"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<link href='https://mint.lc.intuit.com/opensearch.xml' rel='search' title='Mint' type='application/opensearchdescription+xml'>
+<link rel="shortcut icon" type="image/x-icon" href="https://d2gcv4sxt84gxu.cloudfront.net/assets/favicon-0b10633fdacd629a27e2eb1b6be2095142c1da8edda2d2aaceb945a2beeac600.ico" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Q76TLGfNpTptU7cPq2CJtUrn2CyJ94BboajlegTbJeZSIGt4jYYAMqkHt2wplw856ApO+vIv22qZ2EjKYFYwig==" />
+<link rel="stylesheet" media="all" href="https://d2gcv4sxt84gxu.cloudfront.net/assets/bs4/themes/mint-e22cddf0b69bfebffdf9a60c04d4a3ddd289e60c12adfa1e9bb1c78bf14a720a.css" data-turbolinks-track="reload" />
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-100.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-100.woff") format('woff');
+    font-weight: 100;
+    font-style: normal;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-400.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-400.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-500.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-500.woff") format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-600.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-600.woff") format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-700.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-700.woff") format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-900.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-900.woff") format('woff');
+    font-weight: 900;
+    font-style: normal;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-100-i.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-100-i.woff") format('woff');
+    font-weight: 100;
+    font-style: italic;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-400-i.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-400-i.woff") format('woff');
+    font-weight: 400;
+    font-style: italic;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-500-i.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-500-i.woff") format('woff');
+    font-weight: 500;
+    font-style: italic;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-600-i.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-600-i.woff") format('woff');
+    font-weight: 600;
+    font-style: italic;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-700-i.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-700-i.woff") format('woff');
+    font-weight: 700;
+    font-style: italic;
+  }
+</style>
+<style>
+  @font-face {
+    font-family: 'Avenir Next forINTUIT';
+    src: url("https://assets.intuitcdn.net/fonts/avenir-900-i.woff2") format('woff2'),
+         url("https://assets.intuitcdn.net/fonts/avenir-900-i.woff") format('woff');
+    font-weight: 900;
+    font-style: italic;
+  }
+</style>
+
+<script src="https://dwum8argi892z.cloudfront.net/js/cdc_lib_min_1.8.28.js"></script>
+<meta name="robots" content="noindex">
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0059/7795.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87931284-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<meta content='&lt;meta name=&quot;google-site-verification&quot; content=&quot;HqLA7sAsrwnQE8gx8oS6-vYvrRy_0b7NAffkqtYjqjI&quot; /&gt;' name='google-site-verification'>
+
+
+<title>kaiku.com prepaid debit - Mint Bills - Mint</title>
+<meta content='Hello wvanzyl, Thank you for the interest! Our portal for requesting accounts is through the Contact Mint form- once we receive 5 request...' name='description'>
+<meta content='mint bills' name='keywords'>
+<link href='https://mint.lc.intuit.com/questions/1163795-kaiku-com-prepaid-debit-mint-bills' rel='canonical'>
+<meta content='index,follow,noodp' name='robots'>
+<meta content='noydir' name='slurp'>
+<script type='application/ld+json'>{"@context":"http://schema.org","@type":"Question","url":"https://mint.lc.intuit.com/questions/1163795-kaiku-com-prepaid-debit-mint-bills","headline":"kaiku.com prepaid debit - Mint Bills","text":"I am seeing kaiku.com being available in Mint and other Intuit products, but for some reason not with Mint Bills. Is this an available account? I use this card and it is growing quite popular and would love to see it added to Mint Bills as well. thanks!!!","answerCount":1,"commentCount":0,"upvoteCount":0,"dateCreated":"2015-05-22T19:35:11Z","author":{"@type":"Person","name":"mvanzyl"},"acceptedAnswer":{"@type":"Answer","text":"Hello wvanzyl, Thank you for the interest! Our portal for requesting accounts is through the Contact Mint form- once we receive 5 requests, we attempt to partner with the account, and you will be updated through email. Thank you, Mint Maggie","upvoteCount":0,"downvoteCount":0,"dateCreated":"2015-05-23T22:30:03Z","author":{"@type":"Person","name":"Mint Maggie"}}}</script>
+
+
+<script type='application/ld+json'>
+{
+  "@context": "http://schema.org",
+  "@type": "WebSite",
+  "url": "https://mint.lc.intuit.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://mint.lc.intuit.com/search?utf8=%E2%9C%93&q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+
+</script>
+
+</head>
+<body class='' data-turbolinks='false'>
+<header class='navbar navbar-full' data-turbolinks-permanent>
+<div class='container'>
+<div class='hidden-md-down'><a class="header-logo" href="/"><img alt="Mint" src="https://d2gcv4sxt84gxu.cloudfront.net/uploads/logos/26/original.png?1418749300" /></a>
+
+<nav class='nav pull-right'>
+
+
+
+<a class="nav-link" href="/sign_in?return_to=%2Fquestions%2F1163795-kaiku-com-prepaid-debit-mint-bills">Sign In</a>
+</nav>
+</div>
+<div class='hidden-lg-up'><a class="pull-left header-logo" href="/"><img src="https://d2gcv4sxt84gxu.cloudfront.net/uploads/logo_mobile/26/original.png?1418749300" alt="Original" /></a>
+<nav class='nav pull-right'>
+
+<a class="nav-link" href="/sign_in?return_to=%2Fquestions%2F1163795-kaiku-com-prepaid-debit-mint-bills">Sign In</a>
+</nav>
+</div>
+</div>
+</header>
+
+<div class='bg-faded' data-turbolinks-permanent id='search-bar'>
+<div class='container'>
+<div class='row'>
+<div class='col-lg-12'>
+<nav class='navbar navbar-light px-0 d-flex justify-content-start'>
+<form action='/search' class='form-inline navbar-form flex-grow' id='global-search'>
+<div class='input-group w-100'>
+<input autocomplete='off' class='form-control' name='q' placeholder='Search the community...' type='search'>
+<span class='input-group-btn hidden-sm-down'>
+<button class='btn btn-secondary text-muted' type='submit'><i class="fa fa-search"></i></button>
+</span>
+</div>
+</form>
+<ul class='nav navbar-nav ml-auto d-flex'>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class='came-from-search has-answers question' data-current-replier-poll data-current-replier-url='/questions/1163795/question_events.json' data-mentionees-data='[{&quot;id&quot;:3280174,&quot;display_name&quot;:&quot;mvanzyl&quot;,&quot;role&quot;:&quot;User&quot;,&quot;avatar&quot;:&quot;https://d2gcv4sxt84gxu.cloudfront.net/assets/default-user-avatars-thumb-82246b1c45ae7ca201b3a4b3d1d21558169d12fc115127c4deae5d4e92e18e97.png&quot;,&quot;bs4_avatar&quot;:&quot;https://d2gcv4sxt84gxu.cloudfront.net/assets/default-user-avatars-original-d5efadcf497ea7b3d86c6f8d148d66633a29ce78fa8391af628adf32d9989354.png&quot;,&quot;created_at&quot;:&quot;2015-05-22T19:30:13Z&quot;},{&quot;id&quot;:1804873,&quot;display_name&quot;:&quot;Mint Maggie&quot;,&quot;role&quot;:&quot;User&quot;,&quot;avatar&quot;:&quot;https://d2gcv4sxt84gxu.cloudfront.net/uploads/avatars/1804873/thumb.png?1403640998&quot;,&quot;bs4_avatar&quot;:&quot;https://d2gcv4sxt84gxu.cloudfront.net/uploads/avatars/1804873/original.jpg?1403640998&quot;,&quot;created_at&quot;:&quot;2014-06-24T20:14:08Z&quot;}]'>
+<div aria-hidden='true' class='modal fade' id='report-modal-question_1163795' role='dialog' tabindex='-1'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>&times;</span>
+<span class='sr-only'>Close</span>
+</button>
+<h4 class='modal-title'>Why do you want to report this?</h4>
+</div>
+<div class='modal-body'>
+<ul>
+<li><a rel="nofollow" data-method="post" href="/questions/1163795/flags?flag%5Bflag_type%5D=1">Spam</a></li>
+<li><a rel="nofollow" data-method="post" href="/questions/1163795/flags?flag%5Bflag_type%5D=2">Profanity</a></li>
+<li><a rel="nofollow" data-method="post" href="/questions/1163795/flags?flag%5Bflag_type%5D=3">Threats/Abuse</a></li>
+<li><a rel="nofollow" data-method="post" href="/questions/1163795/flags?flag%5Bflag_type%5D=4">Inappropriate</a></li>
+<li><a rel="nofollow" data-method="post" href="/questions/1163795/flags?flag%5Bflag_type%5D=5">Virus/Danger</a></li>
+<li><a rel="nofollow" data-method="post" href="/questions/1163795/flags?flag%5Bflag_type%5D=6">Broken Links</a></li>
+<li><a rel="nofollow" data-method="post" href="/questions/1163795/flags?flag%5Bflag_type%5D=7">Other</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='main-header'>
+<div class='container'>
+<div class='back-to-search mb-2'><a class="hidden" href="https://mint.lc.intuit.com/search?utf8=%E2%9C%93&amp;q=kaiku&amp;button="><i class="fa fa-angle-left"></i> Back to search results</a></div>
+<div class='row'>
+<div class='col-md-9'>
+<h1>kaiku.com prepaid debit - Mint Bills</h1>
+<p><p>I am seeing kaiku.com being available in Mint and other Intuit products, but for some reason not with Mint Bills. Is this an available account? I use this card and it is growing quite popular and would love to see it added to Mint Bills as well. thanks!!!<br /></p></p>
+
+<div class='collapsed comments comments-count-0 my-2 row' id='collapsable_comment_question_1163795'>
+<div class='collapsable'>
+<div class='col-md-2 small'>
+
+</div>
+<div class='col-md-10'>
+
+<form class="new_comment" id="new_comment" action="/comments.json" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="GGA2kdJUw5PFm8LtDwltp6g0cc4GFu4dnVYm8tTFn/oJ/s7FOB9mmwHPwo6N/usrCtnnGH3OtSylJotCsEiKlg==" /><input value="1163795" type="hidden" name="comment[parent_id]" id="comment_parent_id" />
+<input value="Post" type="hidden" name="comment[parent_type]" id="comment_parent_type" />
+<fieldset class='form-group'>
+<textarea rows="1" class="form-control form-control-sm" data-autosize="true" data-at-mentioning="true" data-at-emoji="true" name="comment[body]" id="comment_body">
+</textarea>
+</fieldset>
+
+<div class='text-xs-right'><button name="button" type="submit" class="btn btn-sm btn-primary" data-disable-with="" data-login-required="true">Comment</button></div>
+</form></div>
+</div>
+</div>
+
+</div>
+<div class='col-md-3 text-muted'><div class='collapse navbar-toggleable-sm' id='question-metadata'>
+<div class='media'>
+<div class='media-left'><img class=" avatar rounded-circle" src="https://d2gcv4sxt84gxu.cloudfront.net/assets/default-user-avatars-original-d5efadcf497ea7b3d86c6f8d148d66633a29ce78fa8391af628adf32d9989354.png" alt="Default user avatars original" width="32" height="32" /></div>
+<div class='media-right'>
+<small>
+<ul class='list-unstyled'>
+<li>Asked by <a href="/users/b7009991-fb6c-472e-977a-8a9b2c581a79">mvanzyl</a></li>
+<li>
+<i class="fa fa-clock-o"></i>
+<time class='moment' data-timestamp='2015-05-22T19:35:11Z'></time>
+</li>
+</ul>
+<span class='dropdown' id='question-options'>
+<a class="dropdown-toggle" data-toggle="dropdown" href="#">Options</a>
+<span class='dropdown-menu dropdown-menu-left'>
+<a class="edit-question dropdown-item" href="/questions/1163795/edit"><i class="fa fa-pencil fa-fw"></i> Edit</a>
+<a class="dropdown-item view-more-comments" href="#collapsable_comment_question_1163795"><i class="fa fa-comment-o fa-fw"></i> Ask for details</a>
+<a class="archive-question dropdown-item" data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/questions/1163795"><i class="fa fa-trash-o fa-fw"></i> Archive</a>
+</span>
+</span>
+</small>
+</div>
+</div>
+</div>
+<div class='row hidden-md-up small'>
+<div class='col-xs-6'>
+<i class="fa fa-clock-o"></i>
+<time class='moment' data-timestamp='2015-05-22T19:35:11Z'></time>
+</div>
+<div class='col-xs-6 text-xs-right'>
+<a class="question-metadata-toggler collapsed" data-toggle="collapse" data-target="#question-metadata" href="#"><span class='collapsed-in-text'>hide</span>
+<span class='collapsed-text'>info</span>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container'>
+<div class='row'>
+<div class='col-md-9'>
+<section class='answers' data-answers-url='/questions/1163795/answers.json'>
+
+<div class='answers-list'><div class='answer-wrapper' id='answer_2584783'>
+<div aria-hidden='true' class='modal fade' id='report-modal-answer_2584783' role='dialog' tabindex='-1'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>&times;</span>
+<span class='sr-only'>Close</span>
+</button>
+<h4 class='modal-title'>Why do you want to report this?</h4>
+</div>
+<div class='modal-body'>
+<ul>
+<li><a rel="nofollow" data-method="post" href="/answers/2584783/flags?flag%5Bflag_type%5D=1">Spam</a></li>
+<li><a rel="nofollow" data-method="post" href="/answers/2584783/flags?flag%5Bflag_type%5D=2">Profanity</a></li>
+<li><a rel="nofollow" data-method="post" href="/answers/2584783/flags?flag%5Bflag_type%5D=3">Threats/Abuse</a></li>
+<li><a rel="nofollow" data-method="post" href="/answers/2584783/flags?flag%5Bflag_type%5D=4">Inappropriate</a></li>
+<li><a rel="nofollow" data-method="post" href="/answers/2584783/flags?flag%5Bflag_type%5D=5">Virus/Danger</a></li>
+<li><a rel="nofollow" data-method="post" href="/answers/2584783/flags?flag%5Bflag_type%5D=6">Broken Links</a></li>
+<li><a rel="nofollow" data-method="post" href="/answers/2584783/flags?flag%5Bflag_type%5D=7">Other</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class='answer options-row'>
+
+<h4 class='mb-0 text-uppercase'><i class="fa fa-check"></i> Answer</h4>
+<div class='my-1' data-inline-edit-attribute='body' data-inline-edit-cancel-button='Cancel' data-inline-edit-object='answer' data-inline-edit-ok-button='Save' data-inline-edit-original-content='&lt;p&gt;Hello wvanzyl,&lt;/p&gt;&lt;p&gt;Thank you for the interest! Our portal for requesting accounts is through  the&amp;nbsp;&lt;a href=&quot;https://www.mint.com/contact-mint&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;Contact Mint&lt;/a&gt;&amp;nbsp;form- once we receive 5 requests, we attempt to partner with the account, and you will be updated through email.&lt;/p&gt;&lt;p&gt;Thank you,&lt;br&gt;Mint Maggie&lt;br&gt;&lt;/p&gt;&lt;br&gt;' data-inline-edit-type='wysiwyg' data-inline-edit-url='/answers/2584783' id='inline_edit_answer_2584783_body'>
+<p>Hello wvanzyl,</p><p>Thank you for the interest! Our portal for requesting accounts is through  the <a href="https://www.mint.com/contact-mint" rel="nofollow" target="_blank">Contact Mint</a> form- once we receive 5 requests, we attempt to partner with the account, and you will be updated through email.</p><p>Thank you,<br />Mint Maggie<br /></p><br />
+</div>
+
+<div class='row small'>
+<div class='col-md-5 float-md-right text-md-right text-xs-left voting-container'><span class='text-muted pr-sm'>Was this answer helpful?</span>
+<a class="btn btn-muted btn-sm" data-login-required="true" data-remote="true" rel="nofollow" data-method="post" href="/votes.json?vote%5Bdirection%5D=1&amp;vote%5Bparent_id%5D=2584783&amp;vote%5Bparent_type%5D=Reply">Yes</a>
+<a class="btn btn-muted btn-sm" data-login-required="true" data-remote="true" rel="nofollow" data-method="post" href="/votes.json?vote%5Bdirection%5D=-1&amp;vote%5Bparent_id%5D=2584783&amp;vote%5Bparent_type%5D=Reply">No</a>
+</div>
+<div class='col-md-7 float-md-left text-muted'><div class='media'>
+<div class='media-left'><img class="media-object avatar rounded-circle" src="https://d2gcv4sxt84gxu.cloudfront.net/uploads/avatars/1804873/original.jpg?1403640998" alt="Original" width="64" height="64" /></div>
+<div class='media-right'>
+<div>
+<a href="/users/a690d0da-5772-4dec-a499-274103848d06">Mint Maggie</a>
+
+</div>
+<div>
+<i class="fa fa-clock-o"></i>
+<time class='moment' data-timestamp='2015-05-23T22:30:03Z'></time>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='collapsed comments comments-count-0 my-2 row' id='collapsable_comment_answer_2584783'>
+<div class='collapsable'>
+<div class='col-md-2 small'>
+<a class="view-more-comments" href="#collapsable_comment_answer_2584783"><i class="fa fa-comments-o"></i> Add a comment</a>
+</div>
+<div class='col-md-10'>
+
+<form class="new_comment" id="new_comment" action="/comments.json" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="7vUvwumpX9Zbutzht8yT8+KpEb9+ADf8PagnYv6eTCf/a9eWA+L63p/u3II1OxV/QESHaQXYbM0F2IrSmhNZSw==" /><input value="2584783" type="hidden" name="comment[parent_id]" id="comment_parent_id" />
+<input value="Reply" type="hidden" name="comment[parent_type]" id="comment_parent_type" />
+<fieldset class='form-group'>
+<textarea rows="1" class="form-control form-control-sm" data-autosize="true" data-at-mentioning="true" data-at-emoji="true" name="comment[body]" id="comment_body">
+</textarea>
+</fieldset>
+
+<div class='text-xs-right'><button name="button" type="submit" class="btn btn-sm btn-primary" data-disable-with="" data-login-required="true">Comment</button></div>
+</form></div>
+</div>
+</div>
+
+</div>
+</div>
+<div class='answer-wrapper unanswered hide-from-asker'>
+<div class='answer'>
+<h4>No answers have been posted</h4>
+</div>
+</div>
+</section>
+
+<div class='my-3 hidden' id='post-closed'><i class="fa fa-lock"></i> This post has been closed and is not open for comments or answers.</div>
+<section id='more-actions'>
+<h4>More Actions</h4>
+<ul class='list-unstyled'>
+<li class='pb-2'>
+<a data-login-required="true" rel="nofollow" data-method="post" href="/bookmarks?bookmark%5Bpost_id%5D=1163795"><i class="fa fa-bell-o"></i> Notify me of new answers</a>
+</li>
+<li><a data-toggle="collapse" href="#answer-form"><i class="fa fa-lightbulb-o"></i> I can answer</a></li>
+</ul>
+</section>
+<section class='collapse' id='answer-form'><div class='collapse in' id='answer-guidelines'>
+<p>People come to Mint for help and answers&mdash;we want to let them know that we're here to listen and share our knowledge. We do that with the style and format of our responses. Here are five guidelines:</p>
+<ol>
+<li><strong>Keep it conversational.</strong> When answering questions, write like you speak. Imagine you're explaining something to a trusted friend, using simple, everyday language. Avoid jargon and technical terms when possible. When no other word will do, explain technical terms in plain English.</li>
+<li><strong>Be clear and state the answer right up front.</strong> Ask yourself what specific information the person really needs and then provide it. Stick to the topic and avoid unnecessary details. Break information down into a numbered or bulleted list and highlight the most important details in bold.</li>
+<li><strong>Be concise.</strong> Aim for no more than two short sentences in a paragraph, and try to keep paragraphs to two lines. A wall of text can look intimidating and many won't read it, so break it up. It's okay to link to other resources for more details, but avoid giving answers that contain little more than a link.</li>
+<li><strong>Be a good listener.</strong> When people post very general questions, take a second to try to understand what they're really looking for. Then, provide a response that guides them to the best possible outcome.</li>
+<li><strong>Be encouraging and positive.</strong> Look for ways to eliminate uncertainty by anticipating people's concerns. Make it apparent that we really like helping them achieve positive outcomes.</li>
+</ol>
+</div>
+<div class='text-xs-right mb-sm'>
+<a data-toggle="collapse" id="guidelines-toggler" href="#answer-guidelines"><i class="fa fa-toggle-down"></i>
+<i class="fa fa-toggle-up"></i>
+Answer guidelines
+</a></div>
+
+<form class="new_answer" id="new_answer" data-autosave="/questions/1163795/answers" data-autosave-flash-target="#answer-storage-message" enctype="multipart/form-data" action="/questions/1163795/answers.json" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="PiYF+sYIXjsEChmSNMcthGfUFmwDFPdU8G41A92Pn9cvuP2uLEP7M8BeGfG2MKsIxTmAunjMrGXIHpizuQKKuw==" /><textarea class="wysiwyg" name="answer[body]" id="answer_body">
+</textarea>
+<p class='mb-sm text-right text-muted invisible small' id='answer-storage-message'>Saved to your computer.</p>
+<div class='collapse' id='answer-attachments-fields'>
+<p>
+Select a file to attach:
+<input type="file" name="answer[image_attachments_attributes][0][asset]" id="answer_image_attachments_attributes_0_asset" />
+</p>
+</div>
+
+<div class='row'>
+<div class='col-md-6'><a class="btn btn-secondary hidden-sm-down" data-toggle="collapse" href="#answer-attachments-fields">Attach files</a></div>
+<div class='col-md-6 text-xs-right'>
+<a class="btn btn-cancel btn-sm-block" data-toggle="collapse" href="#answer-form">Cancel</a>
+<input type="submit" name="commit" value="Answer" class="btn btn-primary btn-sm-block" data-disable-with="" data-login-required="true" />
+</div>
+</div>
+</form></section>
+
+
+<div class='footer-secondary-widget-title'>
+</div>
+<div class='footer-contact-widget clearfix ask-a-question'>
+<div class='footer-contact-widget-left'><img height="51" width="64" src="https://d2gcv4sxt84gxu.cloudfront.net/assets/agent-83413991030b5cc6a5d6a127673cb3d0c5b0714b0f6bf96aa7d88a4b9489faec.png" alt="Agent" /></div>
+<div class='footer-contact-widget-right'>
+<p class='footer-contact-widget-heading'>
+Can&#39;t find your answer?
+</p>
+<p>
+<a class="btn-post" data-behavior="login_required track_event" data-track="{&quot;category&quot;:&quot;Banners&quot;,&quot;action&quot;:&quot;Search Results Footer Banner&quot;,&quot;label&quot;:&quot;Submit Link&quot;}" href="/questions/new?question%5Bcached_question_tag_list%5D=&amp;question%5Bsubject%5D=&amp;show_contact=true">Post your question</a>
+or
+<a target="_blank" data-behavior="track_event" data-track="{&quot;category&quot;:&quot;Banners&quot;,&quot;action&quot;:&quot;Search Results Footer Banner&quot;,&quot;label&quot;:&quot;Contact Link&quot;}" href="https://help.mint.com/">contact us</a>.
+</p>
+</div>
+</div>
+<div class='footer-contact-widget clearfix ask-a-question'>
+<div class='footer-contact-widget-left'><img src="" /></div>
+<div class='footer-contact-widget-right'>
+<p>
+</p>
+</div>
+</div>
+
+<div class='back-to-search'><a class="hidden" href="/search?utf8=%E2%9C%93&amp;q=kaiku&amp;button="><i class="fa fa-angle-left"></i> Back to search results</a></div>
+</div>
+</div>
+</div>
+</div>
+
+<footer class='mt-3 py-2' data-turbolinks-permanent>
+<div class='container'>
+</div>
+<div class='container text-xs-center'>
+<span class='mb-1' id='intuit-logo'></span>
+<nav class='nav mb-2 nav-inline'>
+<a class="nav-link" href="/">Home</a>
+<a class="nav-link" data-turbolinks="true" href="/tags">Tags</a>
+
+<a class="nav-link" data-turbolinks="true" href="/terms_of_use">Terms of Use</a>
+<a rel="nofollow" class="nav-link" href="https://security.intuit.com/privacy/">Privacy</a>
+</nav>
+<p>&copy; 2018 Intuit, Inc. All rights reserved.</p>
+</div>
+</footer>
+
+<script>
+  window.LC || (window.LC = {});
+  window.i18n_phrases = {"questions.no_similar":"Sorry, there are no similar questions.","posts.add_tag":"Add your tag here...","posts.save":"Save","posts.cancel":"Cancel","posts.saving":"Saving...","posts.remove":"Remove","product_selector.not_product_question":"Not a product question","product_selector.select_edition":"Select edition","product_selector.select_product_edition":"Select your product's edition","product_selector.cd_download":"CD / Download","product_selector.select_platform":"Select platform","product_selector.select_product_platform":"Select your product's platform","product_selector.other":"Other","product_selector.select_version":"Select version","product_selector.select_product_version":"Select your product's version","product_selector.select_country":"Select country","product_selector.select_product_country":"Select your product's country","core.cancel":"Cancel","core.yes":"Yes","core.error":"Error","current_repliers.growl_message":"<strong><a href='/users/%{user_id}' data-behavior='hovercard' data-hovercard='/users/%{user_id}.js'>%{display_name}</a></strong> is currently replying to this post.","highcharts.loading":"Loading...<br /><i class='icon icon-spin icon-refresh'></i>","login.modal":"<div class=\"modal hide\">\n  <div class=\"modal-header\">\n    <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n    <h2><i class=\"icon-user on-left\"></i>Sign In or Create an Account</h2>\n  </div>\n  <div class=\"modal-body\">\n    <p><strong>After you register or sign in, we'll return you to this page so you can continue your participation in the community.</strong></p>\n  </div>\n  <div class=\"modal-footer\">\n    <a href=\"#\" data-dismiss=\"modal\" class=\"btn btn-link\">Cancel</a>\n    <a class=\"btn btn-primary\" data-disable-with=\"Continue\" %{attr_string}>Continue</a>\n  </div>\n</div>\n","wysihtml5.font_styles.normal":"Normal text","wysihtml5.font_styles.h1":"Heading 1","wysihtml5.font_styles.h2":"Heading 2","wysihtml5.font_styles.h3":"Heading 3","wysihtml5.emphasis.bold":"Bold","wysihtml5.emphasis.italic":"Italic","wysihtml5.emphasis.underline":"Underline","wysihtml5.lists.unordered":"Unordered list","wysihtml5.lists.ordered":"Ordered list","wysihtml5.lists.outdent":"Outdent","wysihtml5.lists.indent":"Indent","wysihtml5.link.insert":"Insert link","wysihtml5.link.cancel":"Cancel","wysihtml5.link.target":"Open in new window?","wysihtml5.image.insert":"Insert image","wysihtml5.image.cancel":"Cancel","wysihtml5.html.edit":"Edit HTML","wysihtml5.colours.black":"Black","wysihtml5.colours.silver":"Silver","wysihtml5.colours.gray":"Grey","wysihtml5.colours.maroon":"Maroon","wysihtml5.colours.red":"Red","wysihtml5.colours.purple":"Purple","wysihtml5.colours.green":"Green","wysihtml5.colours.olive":"Olive","wysihtml5.colours.navy":"Navy","wysihtml5.colours.blue":"Blue","wysihtml5.colours.orange":"Orange","validator.accept":"Accept","validator.required":"This field is required.","validator.remote":"Please fix this field.","validator.email":"Please enter a valid email address.","validator.url":"Please enter a valid URL.","validator.date":"Please enter a valid date.","validator.dateISO":"Please enter a valid date (ISO).","validator.number":"Please enter a valid number.","validator.digits":"Please enter only digits.","validator.creditcard":"Please enter a valid credit card number.","validator.equalTo":"Please enter the same value again.","validator.maxlength":"Please enter no more than {0} characters.","validator.minlength":"Please enter at least {0} characters.","validator.rangelength":"Please enter a value between {0} and {1} characters long.","validator.range":"Please enter a value between {0} and {1}.","validator.max":"Please enter a value less than or equal to {0}.","validator.min":"Please enter a value greater than or equal to {0}.","validator.question":"Please phrase as a question with at least 15 characters and 3 words.","timeago.prefixAgo":"","timeago.prefixFromNow":"","timeago.suffixAgo":"ago","timeago.suffixFromNow":"from now","timeago.seconds":"less than a minute","timeago.minute":"1 minute","timeago.minutes":"%d minutes","timeago.hour":"1 hour","timeago.hours":"%d hours","timeago.day":"1 day","timeago.days":"%d days","timeago.month":"1 month","timeago.months":"%d months","timeago.year":"1 year","timeago.years":"%d years","answer_link_after_copy.title":"You copied an answer link","answer_link_after_copy.body":"To share this answer, go to a question and paste the link in your response. The answer will automatically display after you submit it.","answer_link_after_copy.error":"Please copy the link below","tags.no_question_marks_popup":"Tags may not contain a question mark","notifications.no_notifications_message":"Sorry, no notifications yet. When someone replies to a post you're following, you'll be notified right here.","notifications.view_all":"View all notifications"};
+  window.LC.current_community = {"name":"Mint","is_tax":false,"is_sbg":false,"is_production":true,"locale":null};
+  window.LC.current_user = null;
+  window.LC.custom_analytics_data = {};
+  window.LC.active_split_tests = {};
+  window.LC.reportSuite = "intuitdev";
+</script>
+<script>
+  window.LC.PostTitle = "kaiku.com prepaid debit - Mint Bills"
+  window.LC.postId = "1163795"
+  window.LC.tagIds = "8093"
+</script>
+
+
+<script src="https://d2gcv4sxt84gxu.cloudfront.net/assets/bs4/application-79df4958cf4ff6920e66efeece59ea8a057cfdaae69becef9f05787ab70d65e5.js" data-turbolinks-track="reload"></script>
+
+
+<div aria-hidden='true' class='modal fade' id='login-required-modal' role='dialog' tabindex='-1'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>&times;</span>
+<span class='sr-only'>Close</span>
+</button>
+<h4 class='modal-title'><i class="fa fa-user"></i> Sign in or create an account</h4>
+</div>
+<div class='modal-body'>
+<p>To continue your participation in Mint:</p>
+<a class="btn btn-primary mr-1 sign-in" href="#"><i class="fa fa-lock"></i> Sign in</a>
+or
+<a class="btn btn-primary ml-1 sign-up" href="#">Create an account</a>
+</div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>

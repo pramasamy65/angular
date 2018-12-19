@@ -17,25 +17,9 @@ export class CommunityUpdateService {
         "Accept-Language": "en-US,en;q=0.5"
       })
     };
-    //https://jsonplaceholder.typicode.com/todos/1
-    this.http.get("https://accounts.intuit.com/signin.html", httpOptions1)
-      .subscribe(data => console.log(data));
 
-    const httpOptions = {
-      headers: new HttpHeaders({
-        "Accept": "application/json; charset=utf-8",
-        "Accept-Language": "en-US,en;q=0.5",
-        "Content-Type": "application/json",
-        "Referer": "https://accounts.intuit.com/signin.html"
-      })
-    };
-
-    this.http.post("https://accounts.intuit.com/access_client/sign_in",
-      JSON.stringify({
-        "username": "prakashkec@gmail.com",
-        "password": "Prak123@65",
-        "namespaceId": "50000003"
-      }), httpOptions)
+    // Sample Third Party API : https://jsonplaceholder.typicode.com/todos/1
+    this.http.get("assets/files/mint.html", { responseType: 'text' })
       .subscribe(data => console.log(data));
   }
 }
