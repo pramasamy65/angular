@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import {CommunityUpdateService} from './community-update.service';
+
+import { CommunityUpdateService } from './community-update.service';
+import { Observable } from 'rxjs';
+import { Component, Renderer2, ViewChild, Output, EventEmitter, ElementRef } from '@angular/core'
+
 
 @Component({
   selector: 'app-root',
@@ -7,15 +10,24 @@ import {CommunityUpdateService} from './community-update.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'HttpCommunityPostApp';
 
-  constructor(private communityUpdateService : CommunityUpdateService){
+  viewContent: string;
+
+  constructor(private communityUpdateService: CommunityUpdateService, private renderer: Renderer2, private elRef: ElementRef) {
 
   }
 
-  ngOnInit(){
-    this.communityUpdateService.loginMintCommunity();
+  ngOnInit() {
+    this.communityUpdateService.loginMintCommunity().subscribe(response => {
+      console.log(response);
+
+      this.viewContent = response;
+
+ 
+    });
+
   }
+                                                               
 }
-
-
