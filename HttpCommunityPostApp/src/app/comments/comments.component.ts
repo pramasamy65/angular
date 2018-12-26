@@ -9,22 +9,19 @@ import { CommentsService } from '../service/comments.service';
 export class CommentsComponent implements OnInit {
 
   public comments : string[];
-  //newComment : string;
 
   @Input('newComments') newEnteredComments : string ;
-
-
 
   constructor(private commentsService : CommentsService) { }
 
   ngOnInit() {
-
     this.comments = this.commentsService.getAllComments();
-   console.log("new Comment : " + this.newEnteredComments);
-    //this.comments.push(this.newComment);
-
   }
 
+  onAddComments(){
+    console.log("new Comment : " + this.newEnteredComments);
+    this.comments.push(this.newEnteredComments);
+  }
  
 
 }

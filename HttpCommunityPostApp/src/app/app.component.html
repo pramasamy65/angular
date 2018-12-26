@@ -1,15 +1,14 @@
+<app-header></app-header>
 <div class="row">
     <app-comments [newComments]='myTextareaComments'></app-comments>
     <div class="col-xd-12">
         Do you want to add Comments to mint community
-        <a href="#" (click)="openTextArea()">Add Comment</a>
+        <a href="#" (click)="showTextArea()">Add Comment</a>
     </div>
-    <div *ngIf="openTxtArea">
+    <div *ngIf="showTxtArea">
 
         <textarea rows="8" cols="100" [value]="myTextareaComments" (input)="myTextareaComments = $event.target.value;" >
-
         </textarea>
-
         <button type="button" (click)="onSubmitComments()">submit</button>
         <button type="button" (click)="onCancel()">cancel</button>
     </div>

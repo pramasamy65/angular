@@ -1,6 +1,7 @@
 
-import { Component, Input } from '@angular/core';
-import {CommunityUpdateService} from './service/community-update.service';
+import { Component, Input, ViewChild } from '@angular/core';
+import { CommunityUpdateService } from './service/community-update.service';
+import { CommentsComponent } from './comments/comments.component';
 
 
 @Component({
@@ -10,50 +11,37 @@ import {CommunityUpdateService} from './service/community-update.service';
 })
 export class AppComponent {
 
-  title = 'HttpCommunityPostApp';
-  websiteContent : string ;
+  title = 'Community Comments Post App';
+  websiteContent: string;
 
-  openTxtArea : boolean = false;
+  showTxtArea: boolean = false;
+  myTextareaComments: string = "";
 
-  newComments : string = "";
-
-  myTextareaComments : string = ""; 
-  
-
-  viewContent: string;
+  @ViewChild(CommentsComponent) childcmp: CommentsComponent;
 
   constructor(private communityUpdateService: CommunityUpdateService) {
-
-    this.communityUpdateService.loginMintCommunity().subscribe(
-      response => {
-        this.websiteContent = response;
-      }
-    );
   }
 
-  openTextArea(){
-    this.openTxtArea = true; 
+  showTextArea() {
+    this.showTxtArea = true;
   }
 
-  onCancel(){
-    this.openTxtArea = false; 
+  onCancel() {
+    this.showTxtArea = false;
   }
 
-  onSubmitComments(){
+  onSubmitComments() {
 
-
+    this.childcmp.onAddComments();
     console.log("Comments Submitted");
   }
-  
+
   ngOnInit() {
     this.communityUpdateService.loginMintCommunity().subscribe(response => {
-      console.log(response);
-
-      this.viewContent = response;
-
- 
+      //console.log(response);
+      this.websiteContent = response;
     });
 
   }
-                                                               
+
 }
