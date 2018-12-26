@@ -1,6 +1,0 @@
-{
-  "localhost": {
-    "target": "https://accounts.intuit.com/",
-    "secure": true
-  }
-}

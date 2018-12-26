@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxy.conf.json",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,7 +21,11 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+<<<<<<< HEAD
     "@types/jquery": "^3.3.28",
+=======
+    "bootstrap": "^3.4.0",
+>>>>>>> ee5196712fcaa7f183c7d7e3fa593ae2946d131b
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
     "rxjs": "~6.3.3",

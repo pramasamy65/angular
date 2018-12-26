@@ -1,6 +1,6 @@
+
 import { Component, Input } from '@angular/core';
 import {CommunityUpdateService} from './service/community-update.service';
-
 
 
 @Component({
@@ -20,11 +20,10 @@ export class AppComponent {
   myTextareaComments : string = ""; 
   
 
-  constructor(private communityUpdateService : CommunityUpdateService){
+  viewContent: string;
 
-  }
+  constructor(private communityUpdateService: CommunityUpdateService) {
 
-  ngOnInit(){
     this.communityUpdateService.loginMintCommunity().subscribe(
       response => {
         this.websiteContent = response;
@@ -45,7 +44,16 @@ export class AppComponent {
 
     console.log("Comments Submitted");
   }
+  
+  ngOnInit() {
+    this.communityUpdateService.loginMintCommunity().subscribe(response => {
+      console.log(response);
 
+      this.viewContent = response;
+
+ 
+    });
+
+  }
+                                                               
 }
-
-
