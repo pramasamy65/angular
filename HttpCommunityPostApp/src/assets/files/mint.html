@@ -364,14 +364,17 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 <div class='collapsed comments comments-count-0 my-2 row' id='collapsable_comment_answer_2584783'>
 <div class='collapsable'>
 <div class='col-md-2 small'>
-<a class="view-more-comments" href="#collapsable_comment_answer_2584783"><i class="fa fa-comments-o"></i> Add a comment</a>
+<a class ='btn' class="view-more-commentss" href="" ng-click="showme=true"><i class="fa fa-comments-o"></i> Add a comment</a>
 </div>
+<textarea ng-hide="showme" rows="1" class="form-control form-control-sm" data-autosize="true" data-at-mentioning="true" data-at-emoji="true" name="comment[body]" id="comment_body">
+</textarea>
+
 <div class='col-md-10'>
 
 <form class="new_comment" id="new_comment" action="/comments.json" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="7vUvwumpX9Zbutzht8yT8+KpEb9+ADf8PagnYv6eTCf/a9eWA+L63p/u3II1OxV/QESHaQXYbM0F2IrSmhNZSw==" /><input value="2584783" type="hidden" name="comment[parent_id]" id="comment_parent_id" />
 <input value="Reply" type="hidden" name="comment[parent_type]" id="comment_parent_type" />
 <fieldset class='form-group'>
-<textarea rows="1" class="form-control form-control-sm" data-autosize="true" data-at-mentioning="true" data-at-emoji="true" name="comment[body]" id="comment_body">
+<textarea ng-hide="showme" rows="1" class="form-control form-control-sm" data-autosize="true" data-at-mentioning="true" data-at-emoji="true" name="comment[body]" id="comment_body">
 </textarea>
 </fieldset>
 

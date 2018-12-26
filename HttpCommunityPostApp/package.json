@@ -17,10 +17,13 @@
     "@angular/core": "~7.0.0",
     "@angular/forms": "~7.0.0",
     "@angular/http": "~7.0.0",
+    "@angular/material": "^7.2.0",
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+    "@types/jquery": "^3.3.28",
     "core-js": "^2.5.4",
+    "jquery": "^3.3.1",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },

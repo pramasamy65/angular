@@ -1,0 +1,13 @@
+<div class="container">
+
+  <app-cockpit (serverCreated)="onServerCreated($event)" 
+  (bpCreated)="onbpCreated($event)">
+  </app-cockpit>
+
+  <div class="row">
+    <div class="col-xs-12">
+
+      <app-server-element *ngFor="let serverElm of serverElements" [srvElement]="serverElm"></app-server-element>
+    </div>
+  </div>
+</div>

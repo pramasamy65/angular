@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h4 class='mb-0 text-uppercase'><i class="fa fa-check"></i> Recommended Answer</h4>
+    <p *ngFor = "let comment of comments ; let idx = index">
+      
+      <b>Answer {{idx + 1 }} </b> {{comment}}</p>
+  </div>
+
+  <h2>Child Component</h2>
+    current count is {{ addedComments }}
+
+
+</div>
+
+
