@@ -34,6 +34,8 @@ export class AppComponent {
 
     this.childcmp.onAddComments();
     console.log("Comments Submitted");
+    this.showTxtArea = false;
+    this.myTextareaComments = "";
   }
 
   ngOnInit() {

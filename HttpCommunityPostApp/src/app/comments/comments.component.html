@@ -1,10 +1,8 @@
-<div class="row">
-  <div class="col-xs-12">
-    <h4 class='mb-0 text-uppercase'><i class="fa fa-check"></i> Recommended Answer</h4>
-    <p *ngFor = "let comment of comments ; let idx = index">
-      
-      <b>Answer {{idx + 1 }} </b> {{comment}}</p>
+<div class="panel panel-primary">
+  <div class="panel-heading">Recommended Answer</div>
+  <div class="panel-body">
+    <p *ngFor="let comment of comments ; let idx = index">
+      <b>Answer {{idx + 1 }} : </b>
+      {{comment}}</p>
   </div>
 </div>
-
-
