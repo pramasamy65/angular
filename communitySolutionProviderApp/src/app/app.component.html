@@ -6,15 +6,12 @@
       <mat-card-title>Let's get you an answer</mat-card-title>
       <mat-card-subtitle>Experts and customers are here, 24/7.</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content>
-      <p>
-          Ask your question
-      </p>
-    </mat-card-content>
-    <form class="example-form">
-       
-          <textarea matInput placeholder="Leave a comment"></textarea>
-      
-      </form>
   </mat-card>
+  <form #form="ngForm" (ngSubmit)="getAnswer(form)" novalidate>
+    <label for="Comment">Ask your question</label>
+    <textarea name="question" ngModel #question="ngModel"  cols="30" rows="10"
+      class="form-control"></textarea>
+
+  <button class="btn btn-primary">Submit</button>
+</form>
 </div>
