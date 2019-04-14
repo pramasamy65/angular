@@ -1,47 +1,44 @@
  
+## Initial Project SetUp
+    * Create new Project -> ng new 301409-hackathon-frontend
+    * npm install -> install dependencies based on package.json
+    * npm audit fix -> Fix vulnerability
+    * ng serve -> run angular Project -> http://localhost:4200/
 
-# Create new Project -> ng new 301409-hackathon-frontend
-# npm install -> install dependencies
-# npm audit fix -> Fix vulnerability
-# ng serve -> run angular Project
-# http://localhost:4200/
-###### Explain about initial config and Files package.json
+    * ng g c defaultLayout
+    * ng generate component --spec=false my-component
+    * ng g c associateDetails --flat : Create only files not directory
 
-###### write about app.module.ts
+    * https://github.com/coreui/coreui-free-angular-admin-template
+        * Copied UI componet and referred structure
+        * Copy _nav.ts
+        * copy Image and SCSS FOlder
+        * copy "styles":stylePreprocessorOptions, scripts in angular.json
+        * include all dependencies package.json
 
-## Router Config -> 
-    * Basic Routing - https://coryrylan.com/blog/introduction-to-angular-routing
+## Dependency Installation
+    * npm i --save angular-bootstrap-md chart.js@2.5.0 font-awesome hammerjs
+    * npm install angular-material --save
+    * npm install --save rxjs-compat
+
+    * MdBootstrap for Navigation bars and headers https://coursetro.com/posts/code/132/Material-Design-Bootstrap-4-and-Angular-5-Tutorial---MdBootstrap
+
+## Explain about package.json, angular.json, app-routing.ts, app-module.ts
+    * https://www.edureka.co/blog/angular-tutorial/
+
+## Router Configuration
+    * Basic Routing example : https://coryrylan.com/blog/introduction-to-angular-routing
     * https://shermandigital.com/blog/configure-routing-in-an-angular-cli-project/
     * ng g module app-routing
-    
 
-##  ng generate component defaultLayout
-
-# Copy _nav.ts
-# copy Image and SCSS FOlder
-#  copy "styles":stylePreprocessorOptions, scripts in angular.json
-# include all depnedicu package.json
-
-# ng generate component dashboard
-
-
-* npm i --save angular-bootstrap-md chart.js@2.5.0 font-awesome hammerjs
-
-https://coursetro.com/posts/code/132/Material-Design-Bootstrap-4-and-Angular-5-Tutorial---MdBootstrap
-
-https://coursetro.com/posts/code/132/Material-Design-Bootstrap-4-and-Angular-5-Tutorial---MdBootstrap
-
-
-* npm install angular-material --save
-
-npm install --save rxjs-compat
-
-
-## ng g c associateDetails --flat
-
-## ng generate component --spec=false my-component
-
-#If you're using Angular CLI, this is as simple as including one line in your styles.css file:
-
-
+## Angular Material — Data Table with HTTP call
+    * https://www.devglan.com/angular/angular-data-table-example
+    * https://code-maze.com/angular-material-table/#sortingdata
+    * https://medium.com/codingthesmartway-com-blog/angular-material-part-4-data-table-23874582f23a
+    * Refer following files
+        * user-details.components.html
+        * user-details.components.ts
+        * user-service.ts
+        * user.model.ts
+        * user.sample.json
 
