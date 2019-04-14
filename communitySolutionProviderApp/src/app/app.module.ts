@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { MatCardModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -18,7 +19,7 @@ import { MatCardModule } from '@angular/material';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    MatCardModule
+    MatCardModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
