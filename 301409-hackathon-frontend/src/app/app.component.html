@@ -1,0 +1,70 @@
+<div class="container">
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue lighten-1" [containerInside]="true" class="h4">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">
+      <img src="assets/img/favicon.ico" alt="" class="img-fluid rounded-circle z-depth-2">
+
+  </a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['']">Home
+          <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/dashboard']" >Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Chart</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link waves-light" [routerLink]="['/theme']" mdbWavesEffect>Theme</a>
+        </li>
+
+      <!-- Dropdown -->
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          Outreach Metrics<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Participation Metrics</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Engagement Metrics</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Retention Metrics</a>
+          <!-- <div class="divider dropdown-divider"></div> -->
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Acquisition Metrics</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">General Metrics</a>
+        </div>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+          <a class="nav-link" href="#"><i class="icon-list"></i></a>
+      </li>
+      <li class="nav-item avatar dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <img src="assets/img/avatars/4.jpg" alt="" class="img-fluid rounded-circle z-depth-2"></a>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">My account</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+        </div>
+      </li>
+    </ul>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+
+
+<router-outlet></router-outlet>
+
+</div>
