@@ -6,26 +6,29 @@ import { DataSource } from '@angular/cdk/collections';
 import { UserService } from 'src/app/service/user.service';
 import { User } from 'src/app/models/user.model';
 import { MatTableDataSource,MatPaginator,MatSort } from '@angular/material';
+import { ParticipationMetricsService } from 'src/app/service/participationMetrics.service';
 
 
 @Component({
-  selector: 'app-user-details1',
-  templateUrl: './user-details.component.html'
+  selector: 'app-user-details',
+  templateUrl: './associate-details.component.html'
 })
-export class UserDetailsComponent implements OnInit {
+export class AssociateDetailsComponent implements OnInit {
 
   dataSource = new MatTableDataSource();
-  //dataSource = new UserDataSource(this.userService);
-  displayedColumns = ['name', 'email', 'phone', 'company'];
+  displayedColumns = ['associateId', 'name', 'designation', 'location', 'buinessUnit'];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private userService: UserService) { }
+  
+  constructor(private participationMetricsService: ParticipationMetricsService) { }
+  
+  
 
   ngOnInit() {
-    console.log("UserDetailsComponent ngOnInit()");
-    this.userService.getUserDetails().subscribe(
+    console.log("AssociateDetailsComponent ngOnInit()");
+    this.participationMetricsService.getAssociateHeadCount().subscribe(
       data => {
         this.dataSource.data = data;
       }
@@ -42,15 +45,3 @@ export class UserDetailsComponent implements OnInit {
   }
 
 }
-/*
-export class UserDataSource extends DataSource<any> {
-  constructor(private userService: UserService) {
-    super();
-  }
-  connect(): Observable<User[]> {
-    return this.userService.getUserDetails();
-  }
-  disconnect() { }
-}
-
-*/

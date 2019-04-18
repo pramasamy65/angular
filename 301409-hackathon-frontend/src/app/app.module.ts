@@ -15,6 +15,8 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ThemeComponent } from './views/theme/theme.component';
 import { UserDetailsComponent } from './views/dashboard/user-details.component';
 import { NavbarComponent } from './views/common/navbar.component';
+import { ParticipationMetricsService } from './service/participationMetrics.service';
+import { AssociateDetailsComponent } from './views/dashboard/associate-details.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { NavbarComponent } from './views/common/navbar.component';
     DashboardComponent,
     ThemeComponent,
     UserDetailsComponent,
+    AssociateDetailsComponent,
     NavbarComponent
   ],
   imports: [
@@ -37,7 +40,7 @@ import { NavbarComponent } from './views/common/navbar.component';
     MatPaginatorModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [UserService],
+  providers: [UserService,ParticipationMetricsService],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

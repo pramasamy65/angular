@@ -4,17 +4,20 @@
   </div>
   <div class="card-body">
       <label>Choose Participation Metrics </label>
-      <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..">
+      <select (change)="onChange($event)" class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here..">
           <option value="">.........</option>
-          <option value="1" >Head Count</option>
-          <option value="2">Unique Volunteers</option>
-          <option value="3">Total Volunteering Hours</option>
-          <option value="3">Coverage</option>
-          <option value="3">Avg. Frequency Per Volunteer</option>
+          <option value="1">Head Count</option>
+          <option value="2">Unique Volunteers By Location</option>
+          <option value="3">Unique Volunteers By Business Unit</option>
+          <option value="4">Total Volunteering Hours</option>
+          <option value="5">Coverage</option>
+          <option value="6">Avg. Frequency Per Volunteer</option>
         </select>
         <br>
         <button type="button" class="btn btn-primary">Submit</button>
         <button type="button" class="btn btn-primary">Cancel</button>
       </div>
-      <app-user-details></app-user-details>
+      <ng-container *ngIf="headCountDisplay">
+        <app-user-details></app-user-details>
+    </ng-container>
   </div>

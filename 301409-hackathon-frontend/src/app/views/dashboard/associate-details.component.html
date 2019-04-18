@@ -1,0 +1,34 @@
+<div>
+
+  <mat-form-field appearance="standard">
+    <input matInput placeholder="Filter" type="text" (keyup)="doFilter($event.target.value)">
+  </mat-form-field>
+
+  <mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="associateId">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Associate Id </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.associateId}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Asssociate Name </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="designation">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Designation </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.designation}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="location">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Location </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.location}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="buinessUnit">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Buiness Unit </mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.buinessUnit}} </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25]">
+  </mat-paginator>
+</div>
