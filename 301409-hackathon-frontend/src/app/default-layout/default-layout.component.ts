@@ -2,7 +2,8 @@ import { Component, OnDestroy, Inject } from '@angular/core';
 
 @Component({
   selector: 'app-default-layout',
-  templateUrl: './default-layout.component.html'
+  templateUrl: './default-layout.component.html',
+  styleUrls: [ './default-layout.component.css' ]
 })
 export class DefaultLayoutComponent {
   

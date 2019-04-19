@@ -54,4 +54,5 @@ import { GenericMetricsComponent } from './views/dashboard/generic-metrics.compo
   ]
 })
 
-export class AppModule { }
+export class AppModule {
+}
