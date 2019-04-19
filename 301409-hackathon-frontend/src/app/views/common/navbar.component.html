@@ -2,7 +2,7 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark blue lighten-1" [containerInside]="true" class="h4">
 
   <!-- Navbar brand -->
-  <mdb-navbar-brand><a class="navbar-brand" href="#">
+  <mdb-navbar-brand><a class="navbar-brand">
       <img src="assets/img/favicon.ico" alt="" class="img-fluid rounded-circle z-depth-2">
 
   </a></mdb-navbar-brand>
@@ -17,26 +17,29 @@
           <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/dashboard']" >Dashboard</a>
+        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/dashboard']" >Participation Metrics</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>Chart</a>
+        <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/engagement']">Engagement Metric</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link waves-light" [routerLink]="['/theme']" mdbWavesEffect>Theme</a>
+          <a class="nav-link waves-light" mdbWavesEffect [routerLink]="['/generic']">Generic Metric</a>
         </li>
+     <!--  <li class="nav-item">
+          <a class="nav-link waves-light" [routerLink]="['/theme']" mdbWavesEffect>Theme</a>
+        </li>-->
 
       <!-- Dropdown -->
       <li class="nav-item dropdown" dropdown>
         <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
           Outreach Metrics<span class="caret"></span></a>
         <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Participation Metrics</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Engagement Metrics</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Retention Metrics</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/dashboard']">Participation Metrics</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/engagement']">Engagement Metrics</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect>Retention Metrics</a>
           <!-- <div class="divider dropdown-divider"></div> -->
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Acquisition Metrics</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">General Metrics</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect>Acquisition Metrics</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect [routerLink]="['/generic']">Generic Metrics</a>
         </div>
       </li>
 

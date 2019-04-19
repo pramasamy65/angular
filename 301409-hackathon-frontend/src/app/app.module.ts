@@ -15,8 +15,11 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ThemeComponent } from './views/theme/theme.component';
 import { UserDetailsComponent } from './views/dashboard/user-details.component';
 import { NavbarComponent } from './views/common/navbar.component';
-import { ParticipationMetricsService } from './service/participationMetrics.service';
+import { MetricsService } from './service/metrics.service';
 import { AssociateDetailsComponent } from './views/dashboard/associate-details.component';
+import { ParticipationMetricDetailsComponent } from './views/dashboard/participation-metric-details.component';
+import { EngagementMetricsComponent } from './views/dashboard/engagement-metrics.component';
+import { GenericMetricsComponent } from './views/dashboard/generic-metrics.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { AssociateDetailsComponent } from './views/dashboard/associate-details.c
     ThemeComponent,
     UserDetailsComponent,
     AssociateDetailsComponent,
-    NavbarComponent
+    NavbarComponent,
+    ParticipationMetricDetailsComponent,
+    EngagementMetricsComponent,
+    GenericMetricsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +46,7 @@ import { AssociateDetailsComponent } from './views/dashboard/associate-details.c
     MatPaginatorModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [UserService,ParticipationMetricsService],
+  providers: [UserService,MetricsService],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

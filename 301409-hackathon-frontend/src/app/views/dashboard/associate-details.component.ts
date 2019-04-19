@@ -6,7 +6,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { UserService } from 'src/app/service/user.service';
 import { User } from 'src/app/models/user.model';
 import { MatTableDataSource,MatPaginator,MatSort } from '@angular/material';
-import { ParticipationMetricsService } from 'src/app/service/participationMetrics.service';
+import { MetricsService } from 'src/app/service/metrics.service';
 
 
 @Component({
@@ -22,13 +22,13 @@ export class AssociateDetailsComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   
-  constructor(private participationMetricsService: ParticipationMetricsService) { }
+  constructor(private metricsService: MetricsService) { }
   
   
 
   ngOnInit() {
     console.log("AssociateDetailsComponent ngOnInit()");
-    this.participationMetricsService.getAssociateHeadCount().subscribe(
+    this.metricsService.getAssociateHeadCount().subscribe(
       data => {
         this.dataSource.data = data;
       }

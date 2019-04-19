@@ -4,7 +4,7 @@
     <input matInput placeholder="Filter" type="text" (keyup)="doFilter($event.target.value)">
   </mat-form-field>
 
-  <mat-table [dataSource]="dataSource" matSort>
+  <mat-table [dataSource]="dataSource" matSort >
     <ng-container matColumnDef="associateId">
       <mat-header-cell *matHeaderCellDef mat-sort-header> Associate Id </mat-header-cell>
       <mat-cell *matCellDef="let user"> {{user.associateId}} </mat-cell>

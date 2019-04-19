@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { DefaultLayoutComponent } from './default-layout/default-layout.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { ThemeComponent } from './views/theme/theme.component';
+import { EngagementMetricsComponent } from './views/dashboard/engagement-metrics.component';
+import { GenericMetricsComponent } from './views/dashboard/generic-metrics.component';
 
 export const routes: Routes = [
 
@@ -13,6 +15,14 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'engagement',
+    component: EngagementMetricsComponent
+  },
+  {
+    path: 'generic',
+    component: GenericMetricsComponent
   },
   {
     path: 'theme',
