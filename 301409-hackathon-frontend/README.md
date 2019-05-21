@@ -1,4 +1,6 @@
- 
+## Running Procedure
+	* Refer README FILE - https://github.com/pramasamy65/spring/Hackathon-README.md
+	
 ## Initial Project SetUp
     * Create new Project -> ng new 301409-hackathon-frontend
     * npm install -> install dependencies based on package.json

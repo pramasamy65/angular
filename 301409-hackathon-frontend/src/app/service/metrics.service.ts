@@ -8,9 +8,9 @@ import { GenericMetrics } from '../models/genericMetrics.model';
 @Injectable()
 export class MetricsService {
 
-  private associateHeadCountUrl = 'http://localhost:8080/participationMetrics/headCount';
-  private uniqueVolunteeringDetailsByLocationUrl = 'http://localhost:8080/participationMetrics/uniqueVolunteeringDetailsByLocation';
-  private uniqueVolunteeringDetailsByBUUrl = 'http://localhost:8080/participationMetrics/uniqueVolunteeringDetailsByBU';
+  private associateHeadCountUrl = 'http://localhost:9090/hackFsePortal/hackFseMetricsService/participationMetrics/headCount';
+  private uniqueVolunteeringDetailsByLocationUrl = 'http://localhost:9090/hackFsePortal/hackFseMetricsService/participationMetrics/uniqueVolunteeringDetailsByLocation';
+  private uniqueVolunteeringDetailsByBUUrl = 'http://localhost:9090/hackFsePortal/hackFseMetricsService/participationMetrics/uniqueVolunteeringDetailsByBU';
   
   constructor(private http: HttpClient) { }
   
