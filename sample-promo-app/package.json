@@ -21,10 +21,10 @@
     "@angular/router": "^8.2.13",
     "@clr/angular": "^2.3.1",
     "@clr/ui": "^2.3.1",
-    "core-js": "^2.5.4",
+    "core-js": "^3.3.6",
     "rxjs": "^6.5.3",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1",
+    "zone.js": "~0.10.2",
     "@clr/icons": "2.3.1",
     "@webcomponents/custom-elements": "^1.0.0"
   },
@@ -33,13 +33,13 @@
     "@angular/cli": "^8.3.17",
     "@angular/compiler-cli": "^8.2.13",
     "@angular/language-service": "^8.2.13",
-    "@types/node": "^8.9.4",
-    "@types/jasmine": "^2.8.8",
+    "@types/node": "^12.12.5",
+    "@types/jasmine": "^3.4.5",
     "@types/jasminewd2": "^2.0.3",
     "codelyzer": "^5.0.1",
     "protractor": "^5.4.0",
-    "ts-node": "^7.0.0",
-    "tslint": "^5.11.0",
-    "typescript": "^3.5.3"
+    "ts-node": "^8.4.1",
+    "tslint": "^6.0.0-beta0",
+    "typescript": "3.5.3"
   }
 }
