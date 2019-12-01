@@ -1,0 +1,17 @@
+<h1>Login</h1>
+<form clrForm [formGroup]="form" (ngSubmit)="submit()">
+  <clr-input-container>
+    <label>Email</label>
+    <input clrInput formControlName="fEmail" type="email" />
+    <clr-control-error *clrIfError="required">Email Required</clr-control-error>
+  </clr-input-container>
+
+  <clr-password-container>
+    <label>Password</label>
+    <!-- clrPassword is a clarity Directive-->
+    <input clrPassword formControlName="fPassword" type="password" />
+    <clr-control-error *clrIfError="required">Password Required</clr-control-error>
+  </clr-password-container>
+
+  <button class="btn">Login</button>
+</form>
